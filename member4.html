@@ -3,19 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>朱星雨 - Member Profile</title>
-    <!-- 引入新的 css -->
+    <title>汪雨 - 个人主页</title>
     <link rel="stylesheet" href="css/member.css">
 
-    <!-- 作业强制要求：嵌入式 CSS -->
     <style>
-        /* 1. ID Selector */
-        #bio-text {
-            font-size: 16px;
-            color: #4b5563;
-        }
 
-        /* 2. Heading Style */
         h2 {
             border-bottom: 2px solid #e5e7eb;
             padding-bottom: 10px;
@@ -24,20 +16,18 @@
             font-size: 20px;
         }
 
-        /* 3. Contextual Selector */
-        .details-grid p {
-            margin: 0;
-            padding: 8px 0;
-            border-bottom: 1px dashed #f3f4f6;
-        }
-
-        /* 简单的两列布局 */
         .details-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
         }
-        @media (max-width: 600px) { .details-grid { grid-template-columns: 1fr; gap: 20px; } }
+
+        @media (max-width: 600px) { 
+            .details-grid { 
+                grid-template-columns: 1fr; 
+                gap: 20px; 
+            } 
+        }
     </style>
 </head>
 <body>
@@ -47,15 +37,12 @@
         <div class="member-head">
             <div class="head-content">
                 <!-- 头像 -->
-                <img src="assets/zxy_1.jpg" alt="Avatar" class="member-avatar">
+                <img src="assets/wy_1.jpg" alt="Avatar" class="member-avatar">
                 
-                <!-- 名字和ID (移出到白色区域上方) -->
+                <!-- 名字和ID  -->
                 <div class="hero-info">
-                    <!-- 注意：这里文字在蓝色背景上如果看不清，CSS里我们已经改回黑色了，
-                         因为布局改成了文字显示在下方白色区域的上方悬浮 -->
-                    <!-- 等等，按照布局，文字现在是悬浮在半空 -->
-                    <h1 style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">朱星雨 (Zhu Xingyu)</h1>
-                    <p class="subtitle" style="color: rgba(255,255,255,0.9);">Student ID: 2021001 | Frontend Dev</p>
+                    <h1 style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">汪雨</h1>
+                    <p class="subtitle" style="color: rgba(255,255,255,0.9);">ID: SA25225318 | 后端开发</p>
                 </div>
 
                 <!-- 按钮 -->
@@ -70,7 +57,7 @@
             
             <section>
                 <h2>个人介绍</h2>
-                <p id="bio-text">
+                <p>
                     大家好，我是朱星雨。我是一名计算机科学专业的学生，对前端开发和用户体验设计充满热情。
                     我喜欢探索新地技术，平时热爱摄影和旅行。在团队中，我主要负责网页的视觉设计和CSS布局实现。
                 </p>
