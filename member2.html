@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朱星雨 - 个人主页</title>
+    <link rel="stylesheet" href="css/member.css">
+
+    <style>
+
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 600px) { 
+            .details-grid { 
+                grid-template-columns: 1fr; 
+                gap: 20px; 
+            } 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 顶部：蓝色背景区域 -->
+        <div class="member-head">
+            <div class="head-content">
+                <!-- 头像 -->
+                <img src="assets/zxy_1.jpg" alt="Avatar" class="member-avatar">
+                
+                <!-- 名字和ID  -->
+                <div class="hero-info">
+                    <h1 style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">朱星雨</h1>
+                    <p class="subtitle" style="color: rgba(255,255,255,0.9);">Student ID: SA25225473 | 后端开发</p>
+                </div>
+
+                <!-- 按钮 -->
+                <div class="hero-actions">
+                    <a href="mailto:zxy@example.com" class="btn secondary">发送邮件</a>
+                    <a href="career1.html" class="btn primary">查看技能规划</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="member-content">
+            
+            <section>
+                <h2>个人介绍</h2>
+                <p>
+                    大家好，我是朱星雨。我是一名计算机科学专业的学生，对前端开发和用户体验设计充满热情。
+                    我喜欢探索新地技术，平时热爱摄影和旅行。在团队中，我主要负责网页的视觉设计和CSS布局实现。
+                </p>
+            </section>
+
+            <div class="details-grid">
+                <div>
+                    <h2>基本信息</h2>
+                    <p><strong>家乡：</strong> 中国，合肥</p>
+                    <p><strong>年级：</strong> 2021级 本科生</p>
+                    <p><strong>兴趣：</strong> 编程，篮球，科幻电影</p>
+                </div>
+                <div>
+                    <h2>联系方式</h2>
+                    <p><strong>Email:</strong> zxy@example.com</p>
+                    <p><strong>GitHub:</strong> github.com/zxy</p>
+                    <p><strong>WeChat:</strong> zxy_code</p>
+                </div>
+            </div>
+
+            <section>
+                <h2>职业目标</h2>
+                <p>
+                    <strong>短期目标:</strong> 熟练掌握 HTML5, CSS3 和 JavaScript。
+                </p>
+                <p>
+                    <strong>长期目标:</strong> 成为一名能够独立负责大型项目的全栈工程师。
+                </p>
+            </section>
+            
+            <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
+                <a href="index.html" style="color: #1a4fa3; text-decoration: none; font-size: 14px;">&larr; 返回团队主页</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

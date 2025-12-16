@@ -1,0 +1,234 @@
+/* --- css/member.css --- */
+
+/* 1. 变量 (与你的 main.css 保持一致) */
+:root {
+    --blue-main: #1a4fa3;
+    --blue-light: #e8f0fe;
+    --bg-page: #f4f7fb;
+    --bg-card: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-light: #e5e7eb;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* 2. 布局容器 */
+.container {
+    max-width: 1000px; 
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* 3. 头部卡片区域 (Banner) */
+.member-head {
+    position: relative;
+    height: 200px;
+    background-color: var(--blue-main);
+    background: linear-gradient(to right, #1a4fa3, #2c62c2); 
+    
+    /* 顶部圆角，与下方卡片拼接 */
+    border-radius: 14px 14px 0 0; 
+    border: 1px solid var(--border-light);
+    border-bottom: none; /* 去掉底边框，为了和下面无缝连接 */
+}
+
+/* 4. 头部内容层 (头像 + 名字 + 按钮) */
+.head-content {
+    position: absolute;
+    bottom: -50px; /* 稍微下沉 */
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 40px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.member-avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    /* 边框用白色，与背景区分 */
+    border: 5px solid var(--bg-card);
+    background: #fff;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+}
+
+/* 5. 个人信息文字区域 */
+.hero-info {
+    margin-left: 24px;
+    margin-right: auto; /* 靠左对齐 */
+    margin-bottom: 60px;
+}
+
+.hero-info h1 {
+    margin: 0 0 4px 0;
+    font-size: 28px;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 15px;
+    color: var(--blue-main); /* 用主题色高亮 ID */
+    font-weight: 500;
+}
+
+/* 6. 按钮组 */
+.hero-actions {
+    margin-bottom: 15px;
+
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+/* 通用按钮样式 */
+.btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    width: 120px; /* 固定宽度 */
+    text-align: center; /* 文字居中 */
+    display: inline-block; /* 确保宽度生效 */
+    box-sizing: border-box;
+}
+
+.btn.primary {
+    background-color: var(--blue-main);
+    color: #fff;
+}
+.btn.primary:hover {
+    opacity: 0.9;
+}
+
+.btn.secondary {
+    background-color: #fff;
+    color: var(--text-main);
+    border-color: var(--border-light);
+}
+.btn.secondary:hover {
+    background-color: var(--bg-page);
+}
+
+/* 7. 主体内容卡片 (下半部分) */
+.member-content {
+    background: var(--bg-card);
+    /* 衔接上半部分的圆角 */
+    border-radius: 0 0 14px 14px;
+    /* 加上边框，形成完整的卡片感 */
+    border: 1px solid var(--border-light);
+    border-top: none; 
+    
+    padding: 70px 40px 40px; /* 顶部留出空间给头像 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02); 
+}
+
+/* 8.  <p> 标签样式 */
+.member-content p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+/* 响应式适配 */
+/* --- 手机端最终修复版 (请完全覆盖原来的 @media 部分) --- */
+@media (max-width: 800px) {
+
+    /* 1. 蓝框区域：给足高度 */
+    .member-head {
+        height: 300px !important;
+        overflow: visible !important; /* 必须允许按钮掉出去 */
+    }
+
+    /* 2. 内容布局：垂直居中排列 */
+    .head-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* 占满蓝框 */
+        padding: 0 20px;
+        
+        display: flex;
+        flex-direction: column; /* 垂直排列：上中下 */
+        justify-content: center; /* 垂直居中 */
+        align-items: center;     /* 水平居中 */
+    }
+
+    /* 3. 头像：放在中间 */
+    .member-avatar {
+        width: 100px;
+        height: 100px;
+        margin: 0 0 15px 0; /* 只留下方间距 */
+        border: 4px solid rgba(255,255,255,0.4);
+        box-shadow: none;
+        /* 清除可能存在的 float 或定位干扰 */
+        position: static; 
+        transform: none;
+    }
+
+    /* 4. 名字区域：白色居中 */
+    .hero-info {
+        width: 100%;
+        margin: 0 0 10px 0 !important; /* 清除大边距 */
+        text-align: center;
+        /* 确保它是块级元素，独占一行 */
+        display: block; 
+    }
+
+    .hero-info h1 {
+        font-size: 24px;
+        color: #ffffff !important;
+        margin-bottom: 5px;
+        white-space: normal !important; /* 允许名字换行 */
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        color: rgba(255,255,255,0.85) !important;
+        font-size: 14px;
+        display: block;
+    }
+
+    /* 5. 按钮组：绝对定位到底部外 */
+    .hero-actions {
+        position: absolute;
+        /* 0 是蓝框底部，-60px 是往外推 */
+        bottom: -60px !important; 
+        left: 0;
+        width: 100%;
+        
+        /* 关键修复：解决变成柱子的问题 */
+        display: flex !important;
+        flex-direction: row !important; /* 强制横向排列 */
+        justify-content: center;        /* 居中 */
+        align-items: center;            /* 垂直对齐，防止拉伸 */
+        height: auto !important;        /* 禁止高度拉伸 */
+        
+        gap: 15px;
+        margin: 0 !important;
+        transform: none !important;
+        top: auto !important; /* 禁用 top，改用 bottom 定位 */
+    }
+
+   
+    /* 7. 下方内容区：留出空隙 */
+    .member-content {
+        padding-top: 80px !important;
+    }
+}

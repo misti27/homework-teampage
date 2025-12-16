@@ -1,0 +1,62 @@
+/* --- css/career.css --- */
+
+:root {
+    --blue-main: #1a4fa3;
+    --blue-light: #e8f0fe;
+    --bg-page: #f4f7fb;
+    --bg-card: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-light: #e5e7eb;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--bg-page);
+    color: var(--text-main);
+}
+
+.container {
+    max-width: 800px; /* 技能页通常不需要太宽 */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* 顶部导航条卡片 */
+.nav-card {
+    background: var(--bg-card);
+    border-radius: 14px;
+    padding: 16px 24px;
+    border: 1px solid var(--border-light);
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+.nav-link:hover {
+    color: var(--blue-main);
+}
+
+/* 技能内容卡片 */
+.skill-card {
+    background: var(--bg-card);
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 24px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+/* 保持内部元素的间距 */
+.skill-card h2 {
+    margin-top: 0;
+    color: var(--text-main);
+}

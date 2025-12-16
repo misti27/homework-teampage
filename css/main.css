@@ -1,0 +1,164 @@
+
+:root {
+    --blue-main: #1a4fa3;
+    --blue-light: #e8f0fe;
+    --bg-page: #f4f7fb;
+    --bg-card: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-light: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg-page);
+    color: var(--text-main);
+}
+
+h1, h2, h3 {
+    margin: 0 0 12px 0;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+
+
+.page-header {
+    max-width: 1200px;
+    margin: 32px auto 16px;
+    padding: 0 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px 40px;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 28px;
+    border: 1px solid var(--border-light);
+    box-shadow:
+        0 1px 2px rgba(0,0,0,0.03),
+        0 8px 24px rgba(0,0,0,0.04);
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.member-card {
+    background-color: aliceblue;
+    border-radius: 12px;
+    padding: 20px 18px 22px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 6px 16px rgba(0,0,0,0.08);
+}
+
+
+/* 头像  */
+.member-avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 2px solid var(--blue-light);
+}
+
+/* Info */
+
+.member-card h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.student-id {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.role {
+    font-size: 13px;
+    margin-top: 2px;
+    color: #475569;
+}
+
+/* 链接按钮 */
+
+.visit-btn {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--blue-main);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+}
+
+.visit-btn:hover {
+    background-color: #abd9ffef;
+}
+
+
+.city p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.city-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.city-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border-light);
+    transition: transform 0.2s ease;
+}
+
+.city-gallery img:hover {
+    transform: scale(1.02);
+}
+
+
+@media (max-width: 600px) {
+    .card {
+        padding: 18px;
+    }
+
+    .member-avatar {
+        width: 72px;
+        height: 72px;
+    }
+}
