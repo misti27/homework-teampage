@@ -134,26 +134,25 @@ body {
 
 /* --- 通用页脚样式  --- */
 .site-footer {
-    /* 布局与间距 */
-    margin-top: 60px;       /* 无论页面内容多短，页脚都与上面保持距离 */
-    padding: 30px 20px;     /* 上下留白 */
-    text-align: center;     /* 文字居中 */
+    margin-top: 30px;       
+    padding: 30px 20px;     
+    text-align: center;    
     
     /* 颜色与边框 */
-    background-color: var(--bg-card, #ffffff); /* 使用你定义的白色背景变量 */
-    border-top: 1px solid var(--border-light, #e5e7eb); /* 顶部加一条浅灰线 */
+    background-color: var(--bg-card); 
+    border-top: 1px solid var(--border-light); 
     
     /* 文字样式 */
-    color: var(--text-muted, #6b7280); /* 使用浅灰色文字 */
+    color: var(--text-muted); 
     font-size: 14px;
 }
 
 .site-footer p {
-    margin: 5px 0; /* 控制段落间距 */
+    margin: 5px 0; 
 }
 
 .site-footer a {
-    color: var(--blue-main, #1a4fa3); /* 使用主题蓝色 */
+    color: var(--blue-main); 
     text-decoration: none;
     font-weight: 500;
     transition: opacity 0.2s;

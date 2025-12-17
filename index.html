@@ -8,8 +8,47 @@
 </head>
 <body>
 
+<!-- 顶部导航栏 -->
+<nav class="navbar">
+    <div class="nav-container">
+        <!-- 左侧：Logo -->
+        <a href="index.html" class="nav-logo">USTC Team 1</a>
+
+        <!-- 右侧：导航链接 -->
+        <ul class="nav-links">
+            
+            <!-- 1. 团队主页 (普通链接) -->
+            <li><a href="index.html" class="nav-item">团队主页</a></li>
+
+            <!-- 2. 个人主页 (下拉菜单) -->
+            <li class="dropdown">
+                <!-- href="javascript:void(0)" 防止点击跳转，只是用来触发悬停 -->
+                <a href="javascript:void(0)" class="nav-item">个人主页 &#9662;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="member1.html" class="dropdown-link">朱星雨</a></li>
+                    <li><a href="member2.html" class="dropdown-link">朱小琪</a></li>
+                    <li><a href="member3.html" class="dropdown-link">邹雨吟</a></li>
+                    <li><a href="member4.html" class="dropdown-link">汪雨</a></li>
+                </ul>
+            </li>
+
+            <!-- 3. 职业规划 (下拉菜单) -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="nav-item">职业规划 &#9662;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="career1.html" class="dropdown-link">朱星雨的规划</a></li>
+                    <li><a href="career2.html" class="dropdown-link">朱小琪的规划</a></li>
+                    <li><a href="career3.html" class="dropdown-link">邹雨吟的规划</a></li>
+                    <li><a href="career4.html" class="dropdown-link">汪雨的规划</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
 <header class="page-header">
-    <h1>USTC team</h1>
+    <h1>欢迎来到我们的主页</h1>
 </header>
 
 <main class="container">
@@ -57,22 +96,24 @@
 
     <!-- 城市介绍 -->
         <section class="card city">
-            <h2>合肥印象</h2><br>
+            <h2>合肥印象</h2>
+            <div style="margin-top: 20px;"></div>
             
             <h3>地理位置</h3>
-            <p>合肥，安徽省省会，位于中国华东地区，长江三角洲西端。地处江淮之间，环抱巢湖，是一座具有2000多年历史的古城。合肥地理位置优越，承东启西，连南接北，是国家重要的综合交通枢纽。</p>
+            <p class="city-text-block">合肥，安徽省省会，位于中国华东地区，长江三角洲西端。地处江淮之间，环抱巢湖，是一座具有2000多年历史的古城。合肥地理位置优越，承东启西，连南接北，是国家重要的综合交通枢纽。</p>
 
             <h3>人口与经济</h3>
-            <p>合肥市常住人口超过900万，是安徽省政治、经济、文化、科教和金融中心。近年来，合肥经济发展迅速，特别是在科技创新、新能源汽车、集成电路等领域取得了显著成就，被誉为"中国IC之都"和"新能源汽车之都"。</p>
+            <p class="city-text-block">合肥市常住人口超过900万，是安徽省政治、经济、文化、科教和金融中心。近年来，合肥经济发展迅速，特别是在科技创新、新能源汽车、集成电路等领域取得了显著成就，被誉为"中国IC之都"和"新能源汽车之都"。</p>
 
             <h3>风景名胜</h3>
-            <p>合肥拥有丰富的自然和人文景观。巢湖是中国五大淡水湖之一，波光粼粼，风景秀丽。包公园纪念北宋名臣包拯，展现了合肥深厚的历史文化底蕴。三河古镇保存着明清时期的建筑风貌，青石板路、古桥流水，别有一番韵味。此外，逍遥津公园、大蜀山国家森林公园等也是市民休闲的好去处。</p>
+            <p class="city-text-block">合肥拥有丰富的自然和人文景观。巢湖是中国五大淡水湖之一，波光粼粼，风景秀丽。包公园纪念北宋名臣包拯，展现了合肥深厚的历史文化底蕴。三河古镇保存着明清时期的建筑风貌，青石板路、古桥流水，别有一番韵味。此外，逍遥津公园、大蜀山国家森林公园等也是市民休闲的好去处。</p>
 
             <h3>文化特色</h3>
-            <p>合肥是一座创新之城，拥有中国科学技术大学、合肥工业大学等知名高校，科教资源丰富。这里还是包公文化、淮军文化的发源地，传统文化与现代科技在这里完美融合。庐剧、巢湖民歌等地方戏曲艺术形式，展现了合肥独特的文化魅力。</p>
+            <p class="city-text-block">合肥是一座创新之城，拥有中国科学技术大学、合肥工业大学等知名高校，科教资源丰富。这里还是包公文化、淮军文化的发源地，传统文化与现代科技在这里完美融合。庐剧、巢湖民歌等地方戏曲艺术形式，展现了合肥独特的文化魅力。</p>
 
             <h3>美食天堂</h3>
-            <p>合肥美食融合了徽菜和江淮风味。臭鳜鱼、包公鱼、李鸿章大杂烩等传统名菜享誉全国。小吃方面，庐州烤鸭、鸭油烧饼、虾子面、鸡汤包等都是不可错过的美味。逍遥镇胡辣汤更是早餐的经典选择，深受本地人和游客喜爱。</p>
+            <p class="city-text-block">合肥美食融合了徽菜和江淮风味。臭鳜鱼、包公鱼、李鸿章大杂烩等传统名菜享誉全国。小吃方面，庐州烤鸭、鸭油烧饼、虾子面、鸡汤包等都是不可错过的美味。逍遥镇胡辣汤更是早餐的经典选择，深受本地人和游客喜爱。</p>
+
 
             <div class="city-gallery">
                 <a href="https://baike.baidu.com/item/%E5%90%88%E8%82%A5%E5%B8%82/6501395" target="_blank">

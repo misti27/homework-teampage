@@ -133,6 +133,15 @@ p {
     line-height: 1.6;
 }
 
+.city-text-block {
+    /* 底部添加 1像素 虚线 浅灰色 */
+    border-bottom: 1px dashed #e5e7eb; 
+    
+    /* 调整间距，让线在文字下方适中位置 */
+    padding-bottom: 20px; 
+    margin-bottom: 24px;
+}
+
 .city-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -151,6 +160,139 @@ p {
     transform: scale(1.02);
 }
 
+/* --- 通用页脚样式  --- */
+.site-footer {
+    margin-top: 30px;       
+    padding: 30px 20px;     
+    text-align: center;    
+    
+    /* 颜色与边框 */
+    background-color: var(--bg-card); 
+    border-top: 1px solid var(--border-light); 
+    
+    /* 文字样式 */
+    color: var(--text-muted); 
+    font-size: 14px;
+}
+
+.site-footer p {
+    margin: 5px 0; 
+}
+
+.site-footer a {
+    color: var(--blue-main); 
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.site-footer a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* --- 顶部导航栏 (含下拉菜单支持) --- */
+/* 导航栏背景 */
+.navbar {
+    background-color: var(--blue-main, #1a4fa3);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* 确保背景铺满全屏 */
+}
+
+/* 内容容器：限制最大宽度，但保持居中 */
+.nav-container {
+    max-width: 1200px; /* 在 1500px 屏幕上，这会让内容居中，两边留白 */
+    margin: 0 auto;    /* 居中关键 */
+    padding: 0 20px;
+    height: 60px;
+    
+    /* Flex 布局：左右排布 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* 强制横向排列 (防止被手机端样式污染) */
+    flex-direction: row !important; 
+}
+
+/* 左侧 Logo */
+.nav-logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* 右侧链接列表 */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    /* 强制横向排列 */
+    display: flex !important; 
+    flex-direction: row !important;
+    gap: 10px;
+    align-items: center;
+}
+
+/* 导航项 */
+.nav-item {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 0 15px;
+    height: 60px; /* 撑满高度 */
+    display: flex;
+    align-items: center;
+}
+
+/* 下拉菜单父容器 */
+.dropdown {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: auto !important; /* 强制宽度自动 */
+}
+
+/* 下拉菜单 (桌面端隐藏，悬停显示) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 0 0 4px 4px;
+    padding: 5px 0;
+    z-index: 1100;
+    list-style: none; 
+    padding: 0;       
+    margin: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    text-align: left;
+}
+
+.dropdown-link:hover {
+    background-color: #f5f5f5;
+    color: var(--blue-main, #1a4fa3);
+}
+
 
 @media (max-width: 600px) {
     .card {
@@ -160,5 +302,52 @@ p {
     .member-avatar {
         width: 72px;
         height: 72px;
+    }
+
+    .nav-container {
+        flex-direction: column !important; /* 只有在这里才变成垂直 */
+        height: auto;
+        padding: 10px 15px;
+    }
+    
+    .nav-links {
+        flex-direction: column !important;
+        width: 100%;
+        margin-top: 10px;
+        gap: 0;
+    }
+
+    .dropdown {
+        width: 100% !important;
+        display: block;
+        text-align: center;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .nav-item {
+        justify-content: center;
+        height: auto;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 96%;
+        margin: 0 auto 10px auto;
+        display: none;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-link {
+        text-align: center;
+        color: var(--blue-main, #1a4fa3) !important;
     }
 }
