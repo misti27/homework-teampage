@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="css/career.css">
 
     <!-- 【嵌入式 CSS (Embedded CSS)】 -->
-    <!-- 将重要性的样式提取到这里 -->
+    <!-- 保持原有样式不变 -->
     <style>
         /* 技能元数据文本 (灰色小字) */
         .meta-text {
             font-size: 14px;
             color: #666;
-            margin-left: 8px; /* 与技能名保持一点距离 */
+            margin-left: 8px;
         }
 
         /* 分数高亮 (橙色加粗) */
         .score-highlight {
             color: #e67e22;
             font-weight: bold;
-            font-family: Arial, sans-serif; /* 确保数字字体清晰 */
+            font-family: Arial, sans-serif;
         }
 
     </style>
@@ -42,36 +42,40 @@
                 <h3 class="section-header">一、专业硬技能</h3>
 
                 <ul class="skill-list">
+                    <!-- 技能 1: Java 基础 -->
                     <li class="skill-item">
-                        <span class="skill-name">React/TS</span>
+                        <span class="skill-name">Java SE / JVM</span>
                         <span class="meta-text">
                             (重要性: <span class="score-highlight">5/5</span>)
                         </span>
-                        <div class="skill-desc">熟练掌握React Hooks与TypeScript类型系统</div>
+                        <div class="skill-desc">精通集合框架、多线程并发编程及JVM内存模型调优</div>
                     </li>
 
+                    <!-- 技能 2: Spring 全家桶 -->
                     <li class="skill-item">
-                        <span class="skill-name">Node.js</span>
+                        <span class="skill-name">Spring Boot</span>
                         <span class="meta-text">
-                            (重要性: <span class="score-highlight">4/5</span>)
+                            (重要性: <span class="score-highlight">5/5</span>)
                         </span>
-                        <div class="skill-desc">能够构建RESTful API</div>
+                        <div class="skill-desc">熟练构建微服务架构，掌握IOC/AOP原理及常用中间件集成</div>
                     </li>
 
+                    <!-- 技能 3: 数据库与缓存 -->
                     <li class="skill-item">
-                        <span class="skill-name">CSS/Tailwind</span>
+                        <span class="skill-name">MySQL / Redis</span>
                         <span class="meta-text">
                             (重要性: <span class="score-highlight">4.5/5</span>)
                         </span>
-                        <div class="skill-desc">擅长响应式布局与现代化样式</div>
+                        <div class="skill-desc">熟悉SQL索引优化、事务处理以及Redis缓存策略与高可用</div>
                     </li>
 
+                    <!-- 技能 4: 分布式与工具 -->
                     <li class="skill-item">
-                        <span class="skill-name">Database</span>
+                        <span class="skill-name">Docker / Git</span>
                         <span class="meta-text">
-                            (重要性: <span class="score-highlight">3/5</span>)
+                            (重要性: <span class="score-highlight">4/5</span>)
                         </span>
-                        <div class="skill-desc">熟悉MySQL与MongoDB基础</div>
+                        <div class="skill-desc">掌握容器化部署流程、CI/CD流水线及分布式版本控制</div>
                     </li>
                 </ul>
             </div>
@@ -82,19 +86,19 @@
 
                 <ul class="skill-list">
                     <li class="skill-item">
-                        <span class="skill-name">沟通能力</span>
+                        <span class="skill-name">逻辑思维</span>
                         <span class="meta-text">
                             (重要性: <span class="score-highlight">5/5</span>)
                         </span>
-                        <div class="skill-desc">善于团队协作与需求分析</div>
+                        <div class="skill-desc">具备在复杂业务场景下进行数据建模与系统设计的能力</div>
                     </li>
 
                     <li class="skill-item">
-                        <span class="skill-name">问题解决</span>
+                        <span class="skill-name">问题排查</span>
                         <span class="meta-text">
-                            (重要性: <span class="score-highlight">5/5</span>)
+                            (重要性: <span class="score-highlight">4.5/5</span>)
                         </span>
-                        <div class="skill-desc">具备独立排查复杂Bug的能力</div>
+                        <div class="skill-desc">善于通过日志分析与调试工具快速定位生产环境Bug</div>
                     </li>
                 </ul>
             </div>
@@ -103,14 +107,15 @@
             <div class="skill-section">
                 <h3 class="section-header">三、职业发展规划</h3>
                 
+                <!-- 保持原有的内联样式 (Inline CSS) 以符合作业要求 -->
                 <div style="border: 1px solid #e1e4e8; background-color: #fafbfc; padding: 25px; border-radius: 8px; font-size: 15px; color: #333; line-height: 1.8;">
                     <p style="margin-bottom: 12px; margin-top: 0;">
-                        <strong style="color: #1a4fa3;">我的目标：</strong> 成为一名全栈工程师。
+                        <strong style="color: #1a4fa3;">我的目标：</strong> 成为一名资深后端架构师。
                     </p>
                     <p style="margin: 0;">
-                        <strong>短期：</strong> 深入学习Next.js和服务器端渲染技术；<br>
-                        <strong>中期：</strong> 掌握微服务架构和云原生部署；<br>
-                        <strong>长期：</strong> 成为技术专家，能够架构大型分布式系统。
+                        <strong>短期：</strong> 深入研究Spring Cloud微服务生态与高并发解决方案；<br>
+                        <strong>中期：</strong> 掌握分布式系统设计（如消息队列、分库分表）与云原生技术；<br>
+                        <strong>长期：</strong> 具备大型分布式系统的架构设计能力，成为技术专家。
                     </p>
                 </div>
             </div>
@@ -118,19 +123,19 @@
             <!-- 返回按钮 -->
             <div style="text-align: center; margin-top: 40px;">
 
-                <a href="member1.html" class="btn-back">← 返回个人主页</a>
+                <a href="member2.html" class="btn-back">← 返回个人主页</a>
 
                 <a href="index.html" class="btn-back" style="margin-left: 20px;">← 返回团队主页</a>
 
             </div>
 
-        </div> 
-    </div> 
+        </div> <!-- End card-body -->
+    </div> <!-- End container -->
 
     <footer class="site-footer">
         <p>&copy; 2025 USTC Team 1. All rights reserved.</p>
         <p>联系我们: <a href="mailto:team@example.com">team@example.com</a></p>
     </footer>
-
+    
 </body>
 </html>
