@@ -1,6 +1,4 @@
-/* --- css/member.css --- */
 
-/* 1. 变量 (与你的 main.css 保持一致) */
 :root {
     --blue-main: #1a4fa3;
     --blue-light: #e8f0fe;
@@ -19,30 +17,27 @@ body {
     line-height: 1.6;
 }
 
-/* 2. 布局容器 */
 .container {
     max-width: 1000px; 
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* 3. 头部卡片区域 (Banner) */
+
 .member-head {
     position: relative;
     height: 200px;
     background-color: var(--blue-main);
     background: linear-gradient(to right, #1a4fa3, #2c62c2); 
     
-    /* 顶部圆角，与下方卡片拼接 */
     border-radius: 14px 14px 0 0; 
     border: 1px solid var(--border-light);
     border-bottom: none; /* 去掉底边框，为了和下面无缝连接 */
 }
 
-/* 4. 头部内容层 (头像 + 名字 + 按钮) */
 .head-content {
     position: absolute;
-    bottom: -50px; /* 稍微下沉 */
+    bottom: -50px; 
     left: 0;
     width: 100%;
     box-sizing: border-box;
@@ -57,17 +52,15 @@ body {
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    /* 边框用白色，与背景区分 */
     border: 5px solid var(--bg-card);
     background: #fff;
     object-fit: cover;
     box-shadow: 0 4px 6px rgba(0,0,0,0.08);
 }
 
-/* 5. 个人信息文字区域 */
 .hero-info {
     margin-left: 24px;
-    margin-right: auto; /* 靠左对齐 */
+    margin-right: auto; 
     margin-bottom: 60px;
 }
 
@@ -85,7 +78,6 @@ body {
     font-weight: 500;
 }
 
-/* 6. 按钮组 */
 .hero-actions {
     margin-bottom: 15px;
 
@@ -93,7 +85,6 @@ body {
     margin-bottom: 0;
 }
 
-/* 通用按钮样式 */
 .btn {
     padding: 8px 16px;
     border-radius: 8px;
@@ -102,9 +93,9 @@ body {
     text-decoration: none;
     transition: all 0.2s ease;
     border: 1px solid transparent;
-    width: 120px; /* 固定宽度 */
-    text-align: center; /* 文字居中 */
-    display: inline-block; /* 确保宽度生效 */
+    width: 120px; 
+    text-align: center;
+    display: inline-block; 
     box-sizing: border-box;
 }
 
@@ -117,7 +108,7 @@ body {
 }
 
 .btn.secondary {
-    background-color: #fff;
+    background-color: var(--bg-card);
     color: var(--text-main);
     border-color: var(--border-light);
 }
@@ -125,43 +116,37 @@ body {
     background-color: var(--bg-page);
 }
 
-/* 7. 主体内容卡片 (下半部分) */
 .member-content {
     background: var(--bg-card);
-    /* 衔接上半部分的圆角 */
     border-radius: 0 0 14px 14px;
-    /* 加上边框，形成完整的卡片感 */
     border: 1px solid var(--border-light);
     border-top: none; 
     
-    padding: 70px 40px 40px; /* 顶部留出空间给头像 */
+    padding: 70px 40px 40px; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.02); 
 }
 
-/* 8.  <p> 标签样式 */
 .member-content p {
     color: var(--text-muted);
     line-height: 1.7;
     margin-bottom: 16px;
 }
 
-/* 响应式适配 */
-/* --- 手机端最终修复版 (请完全覆盖原来的 @media 部分) --- */
+
 @media (max-width: 800px) {
 
-    /* 1. 蓝框区域：给足高度 */
     .member-head {
         height: 300px !important;
-        overflow: visible !important; /* 必须允许按钮掉出去 */
+        overflow: visible !important; 
     }
 
-    /* 2. 内容布局：垂直居中排列 */
+    
     .head-content {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%; /* 占满蓝框 */
+        height: 100%;
         padding: 0 20px;
         
         display: flex;
@@ -170,7 +155,6 @@ body {
         align-items: center;     /* 水平居中 */
     }
 
-    /* 3. 头像：放在中间 */
     .member-avatar {
         width: 100px;
         height: 100px;
@@ -182,12 +166,10 @@ body {
         transform: none;
     }
 
-    /* 4. 名字区域：白色居中 */
     .hero-info {
         width: 100%;
         margin: 0 0 10px 0 !important; /* 清除大边距 */
         text-align: center;
-        /* 确保它是块级元素，独占一行 */
         display: block; 
     }
 
@@ -205,10 +187,8 @@ body {
         display: block;
     }
 
-    /* 5. 按钮组：绝对定位到底部外 */
     .hero-actions {
         position: absolute;
-        /* 0 是蓝框底部，-60px 是往外推 */
         bottom: -60px !important; 
         left: 0;
         width: 100%;

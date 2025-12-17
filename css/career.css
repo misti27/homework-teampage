@@ -1,6 +1,5 @@
-/* --- css/career.css --- */
-
 :root {
+    /* 复用 member.css 的变量，保证风格统一 */
     --blue-main: #1a4fa3;
     --blue-light: #e8f0fe;
     --bg-page: #f4f7fb;
@@ -12,51 +11,133 @@
 
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background: var(--bg-page);
     color: var(--text-main);
+    line-height: 1.6;
 }
 
+/* 1. 外层容器 (与 member 保持一致) */
 .container {
-    max-width: 800px; /* 技能页通常不需要太宽 */
+    max-width: 800px; /* 稍微窄一点，阅读体验更好 */
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* 顶部导航条卡片 */
-.nav-card {
-    background: var(--bg-card);
-    border-radius: 14px;
-    padding: 16px 24px;
+/* 2. 卡片头部 - 蓝色渐变区域 */
+.card-header {
+    height: 120px; /* 不需要头像那么高，稍微矮一点 */
+    background: linear-gradient(to right, #1a4fa3, #2c62c2);
+    border-radius: 14px 14px 0 0;
     border: 1px solid var(--border-light);
-    margin-bottom: 24px;
+    border-bottom: none;
+    
+    /* 让标题垂直水平居中 */
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    justify-content: center;
+    position: relative;
 }
 
-.nav-link {
-    text-decoration: none;
+/* 头部标题文字 */
+.header-title {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* 3. 卡片主体 - 白色区域 */
+.card-body {
+    background: var(--bg-card);
+    border-radius: 0 0 14px 14px;
+    border: 1px solid var(--border-light);
+    border-top: none;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+/* 4. 内部样式：技能板块 */
+.skill-section {
+    margin-bottom: 40px;
+}
+
+/* 灰色小标题条 */
+.section-header {
+    background-color: #f9fafb;
+    padding: 12px 15px;
+    border-radius: 6px;
+    color: var(--text-main);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--blue-main); /* 使用主题蓝 */
+}
+
+/* 技能列表重置 */
+.skill-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 单个技能项 */
+.skill-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--border-light);
+}
+
+.skill-item:last-child {
+    border-bottom: none;
+}
+
+.skill-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-main);
+    display: inline-block;
+    min-width: 120px; /* 让名字对齐好看点 */
+}
+
+.skill-desc {
     color: var(--text-muted);
     font-size: 14px;
-}
-.nav-link:hover {
-    color: var(--blue-main);
-}
-
-/* 技能内容卡片 */
-.skill-card {
-    background: var(--bg-card);
-    border-radius: 14px;
-    padding: 30px;
-    margin-bottom: 24px;
-    border: 1px solid var(--border-light);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    margin-top: 6px;
+    display: block;
 }
 
-/* 保持内部元素的间距 */
-.skill-card h2 {
-    margin-top: 0;
+/* 5. 按钮样式 (复用 member 的按钮风格) */
+.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--bg-card);
     color: var(--text-main);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    margin-top: 20px;
+}
+
+.btn-back:hover {
+    background-color: var(--bg-page);
+    border-color: #d1d5db;
+}
+
+/* 响应式适配 */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+    .card-body {
+        padding: 25px 20px;
+    }
+    .header-title {
+        font-size: 22px;
+    }
 }
