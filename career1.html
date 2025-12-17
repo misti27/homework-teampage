@@ -1,32 +1,71 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>职业技能与规划</title>
     <!-- 引入外部 CSS 文件 (保持布局和卡片风格) -->
     <link rel="stylesheet" href="css/career.css">
+    <link rel="stylesheet" href="css/main.css">
 
-    <!-- 【嵌入式 CSS (Embedded CSS)】 -->
-    <!-- 将重要性的样式提取到这里 -->
+    <!-- Embedded CSS -->
     <style>
-        /* 技能元数据文本 (灰色小字) */
         .meta-text {
             font-size: 14px;
             color: #666;
-            margin-left: 8px; /* 与技能名保持一点距离 */
+            margin-left: 8px;
         }
 
         /* 分数高亮 (橙色加粗) */
         .score-highlight {
             color: #e67e22;
             font-weight: bold;
-            font-family: Arial, sans-serif; /* 确保数字字体清晰 */
+            font-family: Arial, sans-serif;
         }
-
     </style>
 </head>
+
 <body>
+
+            <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">USTC Team 1</a>
+
+            <!-- 导航链接 -->
+            <ul class="nav-links">
+
+                <!-- 1. 团队主页 -->
+                <li><a href="index.html" class="nav-item">团队主页</a></li>
+
+                <!-- 2. 个人主页 (下拉菜单) -->
+                <li class="dropdown">
+                    <!-- href="javascript:void(0)" 防止点击跳转，只是用来触发悬停 -->
+                    <a href="javascript:void(0)" class="nav-item">个人主页 &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="member1.html" class="dropdown-link">朱星雨</a></li>
+                        <li><a href="member2.html" class="dropdown-link">朱小琪</a></li>
+                        <li><a href="member3.html" class="dropdown-link">邹雨吟</a></li>
+                        <li><a href="member4.html" class="dropdown-link">汪雨</a></li>
+                    </ul>
+                </li>
+
+                <!-- 3. 职业规划 (下拉菜单) -->
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="nav-item">职业规划 &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="career1.html" class="dropdown-link">朱星雨的规划</a></li>
+                        <li><a href="career2.html" class="dropdown-link">朱小琪的规划</a></li>
+                        <li><a href="career3.html" class="dropdown-link">邹雨吟的规划</a></li>
+                        <li><a href="career4.html" class="dropdown-link">汪雨的规划</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <br>
 
     <div class="container">
         <!-- 卡片头部 -->
@@ -102,8 +141,9 @@
             <!-- 三、职业发展规划 -->
             <div class="skill-section">
                 <h3 class="section-header">三、职业发展规划</h3>
-                
-                <div style="border: 1px solid #e1e4e8; background-color: #fafbfc; padding: 25px; border-radius: 8px; font-size: 15px; color: #333; line-height: 1.8;">
+
+                <div
+                    style="border: 1px solid #e1e4e8; background-color: #fafbfc; padding: 25px; border-radius: 8px; font-size: 15px; color: #333; line-height: 1.8;">
                     <p style="margin-bottom: 12px; margin-top: 0;">
                         <strong style="color: #1a4fa3;">我的目标：</strong> 成为一名全栈工程师。
                     </p>
@@ -124,8 +164,8 @@
 
             </div>
 
-        </div> 
-    </div> 
+        </div>
+    </div>
 
     <footer class="site-footer">
         <p>&copy; 2025 USTC Team 1. All rights reserved.</p>
@@ -133,4 +173,5 @@
     </footer>
 
 </body>
+
 </html>
