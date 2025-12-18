@@ -8,12 +8,33 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
+<style>
+    .city-more {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .city-more a {
+        display: inline-block;
+        font-size: 16px;
+        color: #1a4fa3;
+        text-decoration: none;
+        transition: color 0.2s ease,
+                    text-decoration-color 0.2s ease;
+    }
+
+    .city-more a:hover {
+        color: #2f1aa3;
+        text-decoration: underline;
+    }
+  </style>
+
 <body>
 
     <!-- 顶部导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">USTC Team 15</a>
+            <a href="index.html" class="nav-logo">USTC Team 1</a>
 
             <!-- 导航链接 -->
             <ul class="nav-links">
@@ -61,7 +82,7 @@
             <div class="team-members">
 
                 <div class="member-card">
-                    <img src="assets/zxy_1.jpg" alt="朱星雨" class="member-avatar">
+                    <img src="assets/zxy_1.jpg" alt="朱星雨" class="member-avatar" onerror="this.src='assets/person_default.jpg'">
                     <h3>朱星雨</h3>
                     <p class="student-id">SA25225473</p>
                     <p class="role">后端开发</p>
@@ -69,7 +90,7 @@
                 </div>
 
                 <div class="member-card">
-                    <img src="assets/zxq_1.jpg" alt="朱小琪" class="member-avatar">
+                    <img src="assets/zxq_1.jpg" alt="朱小琪" class="member-avatar" onerror="this.src='assets/person_default.jpg'">
                     <h3>朱小琪</h3>
                     <p class="student-id">SA25225472</p>
                     <p class="role">后端开发</p>
@@ -77,7 +98,7 @@
                 </div>
 
                 <div class="member-card">
-                    <img src="assets/zyy_1.jpg" alt="邹雨吟" class="member-avatar">
+                    <img src="assets/zyy_1.jpg" alt="邹雨吟" class="member-avatar" onerror="this.src='assets/person_default.jpg'">
                     <h3>邹雨吟</h3>
                     <p class="student-id">SA25225479</p>
                     <p class="role">后端开发</p>
@@ -85,7 +106,7 @@
                 </div>
 
                 <div class="member-card">
-                    <img src="assets/wy_1.jpg" alt="汪雨" class="member-avatar">
+                    <img src="assets/wy_1.jpg" alt="汪雨" class="member-avatar" onerror="this.src='assets/person_default.jpg'">
                     <h3>汪雨</h3>
                     <p class="student-id">SA25225318</p>
                     <p class="role">后端开发</p>
@@ -100,53 +121,106 @@
             <h2>合肥印象</h2>
             <div style="margin-top: 20px;"></div>
 
-            <h3>地理位置</h3>
-            <p class="city-text-block">
+            <h3>
+                地理位置
+             <img src="assets/icons/地理位置.png" class="inline-icon" alt="位置">
+            </h3>
+
+            <p class="city-text-block divider">
                 合肥，安徽省省会，位于中国华东地区，长江三角洲西端。地处江淮之间，环抱巢湖，是一座具有2000多年历史的古城。合肥地理位置优越，承东启西，连南接北，是国家重要的综合交通枢纽。</p>
-
-            <h3>人口与经济</h3>
-            <p class="city-text-block">
-                合肥市常住人口超过900万，是安徽省政治、经济、文化、科教和金融中心。近年来，合肥经济发展迅速，特别是在科技创新、新能源汽车、集成电路等领域取得了显著成就，被誉为"中国IC之都"和"新能源汽车之都"。</p>
-
-            <h3>风景名胜</h3>
-            <p class="city-text-block">
-                合肥拥有丰富的自然和人文景观。巢湖是中国五大淡水湖之一，波光粼粼，风景秀丽。包公园纪念北宋名臣包拯，展现了合肥深厚的历史文化底蕴。三河古镇保存着明清时期的建筑风貌，青石板路、古桥流水，别有一番韵味。此外，逍遥津公园、大蜀山国家森林公园等也是市民休闲的好去处。
-            </p>
-
-            <h3>文化特色</h3>
-            <p class="city-text-block">
-                合肥是一座创新之城，拥有中国科学技术大学、合肥工业大学等知名高校，科教资源丰富。这里还是包公文化、淮军文化的发源地，传统文化与现代科技在这里完美融合。庐剧、巢湖民歌等地方戏曲艺术形式，展现了合肥独特的文化魅力。
-            </p>
-
-            <h3>美食天堂</h3>
-            <p class="city-text-block">
-                合肥美食融合了徽菜和江淮风味。臭鳜鱼、包公鱼、李鸿章大杂烩等传统名菜享誉全国。小吃方面，庐州烤鸭、鸭油烧饼、虾子面、鸡汤包等都是不可错过的美味。逍遥镇胡辣汤更是早餐的经典选择，深受本地人和游客喜爱。</p>
-
-
-            <div class="city-gallery">
-                <a href="https://baike.baidu.com/item/%E5%90%88%E8%82%A5%E5%B8%82/6501395" target="_blank">
-                    <img src="assets/广电中心大楼.jpg" alt="广电中心大楼">
-                </a>
-                <a href="https://www.ustc.edu.cn/" target="_blank">
-                    <img src="assets/中科大.jpg" alt="中国科大">
-                </a>
-                <a href="https://www.tripadvisor.cn/Attractions-g297403-Activities-Hefei_Anhui.html" target="_blank">
-                    <img src="assets/逍遥津.jpg" alt="逍遥津">
-                </a>
+            
+            <div>
+            <h3>
+                人口与经济
+            </h3>
+            <div class="city-row left-text divider">
+                <div class="city-text">
+                    <p class="city-text-block">
+                    合肥市常住人口超过900万，是安徽省政治、经济、文化、科教和金融中心，也是全省人口规模最大、综合实力最强的城市。随着城市化进程不断推进，合肥吸引了大量省内外人口集聚，城市人口结构更加多元，年轻人口和高学历人才比例持续上升，为城市发展提供了充足的人力资源和创新活力。
+                    </p>
+                    <p class="city-text-block">
+                    在经济发展方面，合肥近年来保持了较快的增长速度，产业结构不断优化升级。依托雄厚的科研基础和政策支持，合肥在科技创新领域表现突出，逐步形成了以集成电路、新型显示、新能源汽车、人工智能和高端装备制造为代表的战略性新兴产业集群。其中，集成电路产业发展尤为迅速，被誉为“中国 IC 之都”；新能源汽车产业链布局完整，整车制造与核心零部件协同发展，使合肥赢得了“新能源汽车之都”的美誉。
+                    </p>
+                </div>
+                <div class="city-image">
+                    <a href="https://baike.baidu.com/item/%E5%90%88%E8%82%A5%E5%B8%82/6501395" target="_blank">
+                    <img src="assets/人口与经济.jpg" alt="合肥天鹅湖夜景">
+                    </a>
+                </div>
+            </div>
             </div>
 
-            <p style="text-align: center; margin-top: 30px; font-size: 16px; ">
+            <div>
+            <h3>风景名胜</h3>
+            <div class="city-row right-text divider">
+                <div class="city-text">
+                    <p class="city-text-block">
+                    合肥拥有丰富的自然和人文景观，自然风光与历史遗迹在城市中相互交融，形成了独特的城市风貌。巢湖是中国五大淡水湖之一，湖面广阔，水天一色，四季景色各具特色，是合肥最具代表性的自然景观之一。环湖区域生态环境良好，不仅是重要的生态屏障，也成为市民休闲度假和亲近自然的重要场所。
+                    </p>
+                    <p class="city-text-block">
+                    在人文景观方面，包公园以北宋名臣包拯为主题，集纪念性与观赏性于一体，生动展现了合肥深厚的历史文化底蕴和廉政文化传统。三河古镇保存着较为完整的明清时期建筑风貌，青石板路纵横交错，小桥流水相映成趣，体现了典型的江淮水乡特色，吸引了大量游客前来参观体验。
+                    </p>
+                </div>
+                <div class="city-image">
+                    <a href="https://www.tripadvisor.cn/Attractions-g297403-Activities-Hefei_Anhui.html" target="_blank">
+                    <img src="assets/逍遥津.jpg" alt="逍遥津">
+                    </a>
+                </div>
+            </div>
+            </div>
+            
+            <div>
+            <h3>文化特色</h3>
+            <div class="city-row left-text divider">
+                <div class="city-text">
+                    <p class="city-text-block">
+                        合肥具有鲜明而多元的城市文化特色，既承载着深厚的历史积淀，又展现出强烈的现代创新气质。作为包公文化的重要发源地，合肥以北宋名臣包拯的清廉精神为代表，形成了独具特色的廉政文化传统，这种文化精神在城市发展和公共治理中仍具有深远影响。
+                    </p>
+                    <p class="city-text-block">
+                    同时，合肥也是江淮文化的重要组成部分。庐剧、巢湖民歌等地方戏曲和民间艺术形式流传至今，体现了当地人民的生活智慧和审美情趣。在传统节庆和民俗活动中，这些文化元素仍然被广泛传承和保护。
+                    </p>
+                    <p class="city-text-block">
+                    在现代文化层面，合肥依托中国科学技术大学、合肥工业大学等高校和科研机构，形成了浓厚的学术氛围和创新文化。
+                    </p>
+
+                </div>
+                <div class="city-image">
+                    <a href="https://cp.baidu.com/landing/tscp_doc/e3c64b0e58407d1903355bf3754bd2eb" target="_blank">
+                    <img src="assets/文化.jpg" alt="马头墙特色古典建筑风光">
+                    </a>
+                </div>
+            </div>
+            </div>
+            
+            <div>
+            <h3>美食天堂</h3>
+            <div class="city-row right-text divider">
+                <div class="city-text">
+                    <p class="city-text-block">
+                        合肥的饮食文化以徽菜为基础，同时融合了江淮地区的饮食特色，形成了口味多样、风格鲜明的地方美食体系。徽菜讲究火候与原汁原味，注重食材本身的鲜香，使合肥美食在朴实中蕴含独特风味。
+                    </p>
+                    <p class="city-text-block">
+                    传统名菜如臭鳜鱼、包公鱼、李鸿章大杂烩等，在烹饪方式和口味上各具特色，既体现了徽菜的技法，也承载着丰富的历史文化内涵。地方小吃同样种类繁多，鸭油烧饼、虾子面、鸡汤包等深受本地居民和游客喜爱，成为城市日常生活的重要组成部分。
+                    </p>
+                </div>
+                <div class="city-image">
+                    <a href="https://www.sohu.com/a/926678425_121893286" target="_blank">
+                    <img src="assets/美食.jpg" alt="徽菜">
+                    </a>
+                </div>
+            </div>
+            </div>
+            <p class="city-more">
                 <a href="https://www.hefei.gov.cn/" target="_blank">了解更多关于合肥的信息 →</a>
             </p>
         </section>
         </div>
 
 
-
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2025 USTC Team 15. All rights reserved.</p>
+        <p>&copy; 2025 USTC Team 1. All rights reserved.</p>
         <p>联系我们: <a href="mailto:team@example.com">team@example.com</a></p>
     </footer>
 

@@ -6,6 +6,7 @@
     --text-main: #1f2937;
     --text-muted: #6b7280;
     --border-light: #e5e7eb;
+    --text-on-dark:#ffffff;
 }
 
 * {
@@ -60,6 +61,7 @@ p {
 .team-members {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /*屏幕宽：多列，屏幕窄：自动变少列*/
     gap: 24px;
     margin-top: 16px;
 }
@@ -118,7 +120,7 @@ p {
     color: var(--blue-main);
     text-decoration: none;
     padding: 6px 12px;
-    border-radius: 8px;
+    border-radius: 12px;
     transition: background 0.15s ease;
 }
 
@@ -130,26 +132,14 @@ p {
 .city p {
     font-size: 15px;
     line-height: 1.6;
-
-}
-
-.city h3 {
-    display: inline-block;
-
-    background-color: aliceblue; 
-    border: 1px solid var(--blue-light); 
-    border-radius: 4px;         
-    padding: 4px 8px;            
 }
 
 .city-text-block {
-    /* 底部添加 1像素 虚线 浅灰色 */
-    border-bottom: 1px dashed #e5e7eb;
-
-    padding: 0px 30px 15px 10px;
-    margin-bottom: 14px;
-
-
+    text-indent: 2em;
+    padding-bottom: 8px;   /* 缩减内边距 */
+    margin-bottom: 12px;   /* 缩减外边距 */
+    line-height: 1.8;      /* 增加行高，提升阅读体验 */
+    text-align: justify;   /* 让文字两端对齐，看起来更整齐 */
 }
 
 .city-gallery {
@@ -169,28 +159,67 @@ p {
 .city-gallery img:hover {
     transform: scale(1.02);
 }
+.divider {
+    border-bottom: 1px dashed #e5e7eb;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+}
+
+.city-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.city-text {
+    flex: 1;
+}
+
+.city-image {
+    flex: 1;
+}
+
+.city-image img {
+    width: 100%;
+    height: 270px;          /* ✅ 控制图片“视觉高度” */
+    object-fit: cover;     /* ✅ 保持比例，超出部分裁掉 */
+    display: block;
+    border-radius: 10px;
+    border: 1px solid var(--border-light);
+}
+
+/* 默认：文字左，图片右 */
+.city-row.left-text {
+    flex-direction: row;
+}
+
+/* 反转：文字右，图片左 */
+.city-row.right-text {
+    flex-direction: row-reverse;
+}
+
 
 /* --- 通用页脚样式  --- */
 .site-footer {
     margin-top: 30px;
     padding: 30px 20px;
     text-align: center;
-
+    
     /* 颜色与边框 */
-    background-color: var(--bg-card);
-    border-top: 1px solid var(--border-light);
+    background-color: var(--blue-main);
+    /* border-top: 1px solid var( --bg-page); */
 
     /* 文字样式 */
-    color: var(--text-muted);
+    color: var(--text-on-dark);
     font-size: 14px;
 }
 
 .site-footer p {
     margin: 5px 0;
+    color: var(--text-on-dark);
 }
 
 .site-footer a {
-    color: var(--blue-main);
+    color: var(--text-on-dark);
     text-decoration: none;
     font-weight: 500;
     transition: opacity 0.2s;
@@ -210,6 +239,7 @@ p {
     top: 0;
     z-index: 1000;
     width: 100%;
+    /* 确保背景铺满全屏 */
 }
 
 /* 内容容器：限制最大宽度，但保持居中 */
@@ -232,8 +262,41 @@ p {
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
+
+    /* 关键：让它成为“矩形按钮” */
+    padding: 0 16px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    /* 为 hover 做准备 */
+    position: relative;
+    transition: background-color 0.2s ease;
 }
 
+/* Logo 悬停效果 */
+.nav-logo:hover {
+    background-color: rgba(255, 255, 255, 0.12); /* 比背景更深一点 */
+}
+
+/* 底部白色细边提示（hover 时出现） */
+.nav-logo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 3px;
+    background-color: #ffffff;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.nav-logo:hover::after {
+    opacity: 1;
+}
 /* 右侧链接列表 */
 .nav-links {
     list-style: none;
@@ -257,7 +320,26 @@ p {
     /* 撑满高度 */
     display: flex;
     align-items: center;
+    position: relative;
 }
+.nav-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 3px;
+    background-color: #ffffff;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.nav-item:hover::after {
+    opacity: 1;
+}
+
 
 /* 下拉菜单父容器 */
 .dropdown {
@@ -303,6 +385,12 @@ p {
     color: var(--blue-main, #1a4fa3);
 }
 
+.inline-icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 6px;       
+    vertical-align: text-bottom; /* 和文字垂直对齐 */
+}
 
 @media (max-width: 600px) {
     .card {
@@ -359,5 +447,13 @@ p {
     .dropdown-link {
         text-align: center;
         color: var(--blue-main, #1a4fa3) !important;
+    }
+    
+    .city-row {
+        flex-direction: column !important;
+    }
+
+    .city-image {
+        order: -1;
     }
 }
