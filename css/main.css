@@ -428,6 +428,7 @@ p {
         height: auto;
         padding: 12px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: inline-block;
     }
 
     .dropdown-menu {
@@ -441,7 +442,7 @@ p {
     }
 
     .dropdown:hover .dropdown-menu {
-        display: block;
+        display: inline-block;
     }
 
     .dropdown-link {
