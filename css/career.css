@@ -115,7 +115,7 @@ body {
 /* 技能名称加粗 */
 .skill-name-inline {
     font-weight: bold;
-    font-size:large;
+    font-size: 16px;
     color: #1f2937;
     margin-right: 2px;
 }

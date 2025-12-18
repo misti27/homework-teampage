@@ -18,12 +18,19 @@
         }
 
         .details-grid {
+            /* 两列网格布局 */
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr; 
             gap: 40px;
         }
 
+        .member-content a:hover {
+            color: #2f1aa3;
+            text-decoration: underline;
+        }
+
         @media (max-width: 600px) {
+            /* 小屏幕为单列 */
             .details-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -36,7 +43,7 @@
 
     <body>
 
-        <!-- 顶部导航栏 -->
+    <!-- 顶部导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">USTC Team 15</a>
@@ -52,7 +59,7 @@
                     <!-- href="javascript:void(0)" 防止点击跳转，只是用来触发悬停 -->
                     <a href="javascript:void(0)" class="nav-item">个人主页 &#9662;</a>
                     <ul class="dropdown-menu">
-                        <li><a href="member1.html" class="dropdown-link">朱星雨</a></li>
+                        <li><a href="473index.html" class="dropdown-link">朱星雨</a></li>
                         <li><a href="member2.html" class="dropdown-link">朱小琪</a></li>
                         <li><a href="member3.html" class="dropdown-link">邹雨吟</a></li>
                         <li><a href="member4.html" class="dropdown-link">汪雨</a></li>
@@ -63,7 +70,7 @@
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="nav-item">职业规划 &#9662;</a>
                     <ul class="dropdown-menu">
-                        <li><a href="career1.html" class="dropdown-link">朱星雨的规划</a></li>
+                        <li><a href="473career.html" class="dropdown-link">朱星雨的规划</a></li>
                         <li><a href="career2.html" class="dropdown-link">朱小琪的规划</a></li>
                         <li><a href="career3.html" class="dropdown-link">邹雨吟的规划</a></li>
                         <li><a href="career4.html" class="dropdown-link">汪雨的规划</a></li>
@@ -84,13 +91,13 @@
 
                 <!-- 名字和ID  -->
                 <div class="hero-info">
-                    <h1 style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">汪雨</h1>
+                    <h1 style="color: white">汪雨</h1>
                     <p class="subtitle" style="color: rgba(255,255,255,0.9);">ID: SA25225318 | 后端开发</p>
                 </div>
 
                 <!-- 按钮 -->
                 <div class="hero-actions">
-                    <a href="mailto:zxy@example.com" class="btn secondary">发送邮件</a>
+                    <a href="mailto:wang.yu@mail.ustc.edu.cn" class="btn secondary">发送邮件</a>
                     <a href="career4.html" class="btn primary">查看技能规划</a>
                 </div>
             </div>
@@ -101,33 +108,32 @@
             <section>
                 <h2>个人介绍</h2>
                 <p>
-                    大家好，我是朱星雨。我是一名计算机科学专业的学生，对前端开发和用户体验设计充满热情。
-                    我喜欢探索新地技术，平时热爱摄影和旅行。在团队中，我主要负责网页的视觉设计和CSS布局实现。
+                    我是汪雨，来自安徽滁州，目前是中国科学技术大学软件学院2025级研究生。正在学习Java后端开发，热爱编程，期待在未来的职业生涯中不断成长与进步。
                 </p>
             </section>
 
             <div class="details-grid">
                 <div>
                     <h2>基本信息</h2>
-                    <p><strong>家乡：</strong> 中国，合肥</p>
-                    <p><strong>年级：</strong> 2021级 本科生</p>
-                    <p><strong>兴趣：</strong> 编程，篮球，科幻电影</p>
+                    <p><strong>家乡：</strong> 安徽，滁州</p>
+                    <p><strong>年级：</strong> 2025级 研究生</p>
+                    <p><strong>兴趣：</strong> 推理小说，看电影，听音乐，游戏</p>
                 </div>
                 <div>
                     <h2>联系方式</h2>
-                    <p><strong>Email:</strong> zxy@example.com</p>
-                    <p><strong>GitHub:</strong> github.com/zxy</p>
-                    <p><strong>WeChat:</strong> zxy_code</p>
+                    <p><strong>Email:</strong> <a href="mailto:wang.yu@mail.ustc.edu.cn">wang.yu@mail.ustc.edu.cn</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/misti27" >https://github.com/misti27</a></p>
+                    <p><strong>Phone:</strong> 15201726009</p>
                 </div>
             </div>
 
             <section>
                 <h2>职业目标</h2>
                 <p>
-                    <strong>短期目标:</strong> 熟练掌握 HTML5, CSS3 和 JavaScript。
+                    <strong>短期目标:</strong> 熟练掌握 Java 及相关后端技术栈，积累实际项目经验，提升解决问题的能力。
                 </p>
                 <p>
-                    <strong>长期目标:</strong> 成为一名能够独立负责大型项目的全栈工程师。
+                    <strong>长期目标:</strong> 熟悉Spring Boot、MyBatis等技术栈，Redis、MySQL等数据库，RabbitMQ等消息中间件，成为一名能够独立负责大型项目的全栈工程师。
                 </p>
             </section>
 
