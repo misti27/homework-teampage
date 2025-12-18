@@ -130,15 +130,26 @@ p {
 .city p {
     font-size: 15px;
     line-height: 1.6;
+
+}
+
+.city h3 {
+    display: inline-block;
+
+    background-color: aliceblue; 
+    border: 1px solid var(--blue-light); 
+    border-radius: 4px;         
+    padding: 4px 8px;            
 }
 
 .city-text-block {
     /* 底部添加 1像素 虚线 浅灰色 */
     border-bottom: 1px dashed #e5e7eb;
 
-    /* 调整间距，让线在文字下方适中位置 */
-    padding-bottom: 20px;
-    margin-bottom: 24px;
+    padding: 0px 30px 15px 10px;
+    margin-bottom: 14px;
+
+
 }
 
 .city-gallery {
@@ -199,7 +210,6 @@ p {
     top: 0;
     z-index: 1000;
     width: 100%;
-    /* 确保背景铺满全屏 */
 }
 
 /* 内容容器：限制最大宽度，但保持居中 */
