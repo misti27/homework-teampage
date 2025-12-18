@@ -1,0 +1,63 @@
+/* --- 472style.css --- */
+:root {
+    --ice-white: #ffffff;
+    --glacier-mist: #f5faff;
+    --apple-blue: #0071e3;
+    --text-primary: #1d1d1f;
+    --text-secondary: #86868b;
+}
+
+body {
+    background: radial-gradient(at 0% 0%, rgba(240,248,255,1) 0, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(245,250,255,1) 0, transparent 50%),
+                #ffffff;
+    margin: 0;
+    font-family: -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+/* 1. 格式化 p 标签 */
+p {
+    line-height: 1.5;
+    color: var(--text-secondary);
+    font-size: 15px;
+    letter-spacing: -0.01em;
+}
+
+/* 2. 通用类*/
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-radius: 22px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+/* 3. 特定标签类*/
+.header-main h1 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+/* 4. 悬停效果的 a 标签 */
+.apple-link {
+    color: var(--apple-blue);
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.apple-link:hover {
+    opacity: 0.6;
+}
+
+.container {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
