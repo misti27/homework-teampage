@@ -43,15 +43,6 @@ body {
     align-items: flex-end;
 }
 
-.member-avatar {
-    width: 88px;
-    height: 88px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 12px;
-    border: 2px solid var(--blue-light);
-}
-
 .hero-info {
     margin-left: 24px;
     margin-right: auto; 

@@ -1,6 +1,5 @@
 :root {
     --blue-main: #1a4fa3;
-    --blue-light: #e8f0fe;
     --bg-page: #f4f7fb;
     --bg-card: #ffffff;
     --text-main: #1f2937;
@@ -15,8 +14,7 @@
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background: var(--bg-page);
     color: var(--text-main);
 }
@@ -53,9 +51,8 @@ p {
     padding: 24px;
     margin-bottom: 28px;
     border: 1px solid var(--border-light);
-    box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.03),
-        0 8px 24px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    /* 阴影 ： 0 水平偏移，8px 垂直偏移，24px 模糊半径，颜色 */
 }
 
 .team-members {
@@ -76,9 +73,8 @@ p {
 }
 
 .member-card:hover {
-    transform: translateY(-3px);
-    box-shadow:
-        0 6px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px); /* 向上移动3px */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -89,7 +85,7 @@ p {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 12px;
-    border: 2px solid var(--blue-light);
+    border: 2px solid var(--border-light);
 }
 
 /* Info */
