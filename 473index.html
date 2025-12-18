@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+
+    <!-- 外部 CSS -->
+    <link rel="stylesheet" href="473style.css">
+
+    <!-- 内嵌 CSS -->
+    <style>
+        /* ID 选择器 */
+        #bio-text {
+            font-family: Arial, sans-serif;
+        }
+
+        /* 标题样式 */
+        h2 {
+            color: #333;
+        }
+
+        /* 上下文选择器：内容区里的段落 */
+        div.content p {
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; background: #f5f5f5;">
+
+    <!-- 顶部渐变标题栏 -->
+    <div style="
+        background: linear-gradient(to right, #4a90e2, #6fb1fc);
+        padding: 40px 20px;
+        text-align: center;
+        color: white;
+    ">
+        <h1 style="margin: 0; font-size: 32px;">朱星雨</h1>
+        <p style="margin-top: 10px; font-size: 18px;">学号：SA25225473</p>
+    </div>
+
+    <!-- 主体内容容器 -->
+    <div style="max-width: 900px; margin: 40px auto;">
+
+        <!-- 个人信息卡片 -->
+        <div style="
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        " class="content">
+
+            <h2 style="border-left: 6px solid #4a90e2; padding-left: 12px; margin-top: 0;">
+                关于我
+            </h2>
+
+            <img src="assets/zxy_1.jpg" alt="个人照片" 
+                 style="width: 180px; border-radius: 12px; display: block; margin-bottom: 20px;">
+
+            <!-- 简介 -->
+            <p id="bio-text">
+                <li>我来自湖南，今年22岁，目前就读于中国科学技术大学软件学院攻读硕士研究生。</li>
+                <li>我的爱好是阅读、音乐、电影、游戏和睡觉。</li>
+            </p>
+
+        </div>
+
+        <!-- 职业发展计划卡片 -->
+        <div style="
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        " class="content">
+
+            <h2 style="border-left: 6px solid #4a90e2; padding-left: 12px; margin-top: 0;">
+                我的职业发展计划
+            </h2>
+
+            <p>
+                未来我会从事本专业相关工作，目标是WLB。
+            </p>
+        </div>
+
+        <!-- 链接按钮区 -->
+        <div style="text-align: center;">
+
+            <a href="473career.html"
+               class="link"
+               style="
+                   display: inline-block;
+                   padding: 12px 22px;
+                   margin: 10px;
+                   background: #4a90e2;
+                   color: white;
+                   text-decoration: none;
+                   border-radius: 8px;
+                   font-size: 18px;
+                   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+               ">
+                前往职业技能页
+            </a>
+
+            <a href="index.html"
+               class="link"
+               style="
+                   display: inline-block;
+                   padding: 12px 22px;
+                   margin: 10px;
+                   background: #6fb1fc;
+                   color: white;
+                   text-decoration: none;
+                   border-radius: 8px;
+                   font-size: 18px;
+                   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+               ">
+                前往团队页面
+            </a>
+
+            <a href="mailto:zxy1985938323@ustc.mail.edu.com"
+               class="link"
+               style="
+                   display: inline-block;
+                   padding: 12px 22px;
+                   margin: 10px;
+                   background: #8bc6ff;
+                   color: white;
+                   text-decoration: none;
+                   border-radius: 8px;
+                   font-size: 18px;
+                   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+               ">
+                联系我（Email）
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
