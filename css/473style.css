@@ -1,0 +1,32 @@
+/* 格式化所有 p 标签 */
+p {
+    font-size: 16px;
+    color: #444;
+}
+
+/* 通用类（必须复用） */
+.box {
+    margin: 20px;
+    padding: 10px;
+}
+
+/* 标签特定类（例如 header 中的 h1） */
+.header h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+/* a 标签专用类 hover 效果（必需项） */
+.link {
+    transition: 0.3s;
+}
+
+.link:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* 基础响应式 */
+img, video {
+    max-width: 100%;
+}
