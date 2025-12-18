@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朱小琪 - Home</title>
+    <link rel="stylesheet" href="css/472style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 嵌入式 CSS (Embedded CSS) */
+        #bio-text { font-weight: 400; font-size: 17px; color: #424245; } /* ID 选择器 */
+        h2 { font-size: 19px; font-weight: 600; color: #1d1d1f; } /* 标题样式 */
+        h2 i { font-size: 0.8em; margin-right: 8px; color: #0071e3; } 
+        div.info-section p { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; } /* 上下文样式 */
+
+        .hero { text-align: center; margin-bottom: 60px; }
+        .avatar { width: 100px; height: 100px; border-radius: 50%; box-shadow: 0 10px 40px rgba(0,0,0,0.08); margin-bottom: 24px; }
+        
+        /* 按钮组优化为药丸状 */
+        .btn-group { display: flex; justify-content: center; gap: 12px; margin-top: 24px; }
+        .btn-apple { padding: 10px 22px; border-radius: 40px; font-size: 14px; font-weight: 500; text-decoration: none; transition: 0.2s; display: flex; align-items: center; gap: 6px; }
+        .btn-filled { background: #0071e3; color: white; }
+        .btn-outline { background: rgba(0, 113, 227, 0.05); color: #0071e3; }
+        .btn-apple:hover { transform: scale(1.02); }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section class="hero header-main">
+            <img src="assets/zxq_1.jpg" alt="朱小琪" class="avatar">
+            <h1>朱小琪</h1>
+            <p style="color: #86868b; font-weight: 500; letter-spacing: 1px; font-size: 13px;"> <i class="fa-solid fa-graduation-cap" style="margin-right: 10px;"></i>SA25225472</p>
+            <p id="bio-text"></i>25级软件设计04班</p>
+            
+            <div class="btn-group">
+                <a href="472career.html" class="btn-apple btn-filled"><i class="fa-regular fa-lightbulb"></i> 职业技能</a>
+                <a href="index.html" class="btn-apple btn-outline"><i class="fa-solid fa-users"></i> 返回团队</a>
+            </div>
+        </section>
+
+        <section class="glass-panel info-section">
+            <h2><i class="fa-solid fa-id-card"></i>个人背景</h2>
+            <p><i class="fa-solid fa-server" style="opacity:0.5"></i> <span>简介：25级软件设计专业研一在读</span></p>
+            <p><i class="fa-solid fa-camera" style="opacity:0.5"></i> <span>兴趣：唱歌、美食、旅游、阅读</span></p>
+        </section>
+
+        <section class="glass-panel" style="padding: 30px; background: rgba(255, 255, 255, 0.9); border-radius: 12px;">
+            <h2 style="margin-bottom: 25px; color: #1d1d1f; font-size: 22px; font-weight: 600;">
+                <i class="fa-solid fa-location-arrow" style="margin-right: 10px; color: #007AFF;"></i>职业规划
+            </h2>
+            
+            <div style="border-left: 2px solid #007AFF; padding-left: 20px; margin-left: 8px;">
+                <!-- 近期目标 -->
+                <div style="margin-bottom: 20px; position: relative;">
+                    <div style="position: absolute; left: -25px; top: 0; width: 12px; height: 12px; background: #007AFF; border-radius: 50%;"></div>
+                    <h3 style="margin-bottom: 8px; color: #1d1d1f; font-size: 16px; font-weight: 600;">短期（1-2年）</h3>
+                    <p style="font-size: 14px; color: #444; line-height: 1.6;">
+                        夯实编程基础，掌握Java/C++核心技术与主流框架，参与实际项目积累工程经验。
+                    </p>
+                </div>
+                
+                <!-- 中期目标 -->
+                <div style="margin-bottom: 20px; position: relative;">
+                    <div style="position: absolute; left: -25px; top: 0; width: 12px; height: 12px; background: #007AFF; border-radius: 50%;"></div>
+                    <h3 style="margin-bottom: 8px; color: #1d1d1f; font-size: 16px; font-weight: 600;">中期（3-5年）</h3>
+                    <p style="font-size: 14px; color: #444; line-height: 1.6;">
+                        深入底层原理，掌握系统架构设计，在人工智能或高性能计算方向形成技术专长。
+                    </p>
+                </div>
+                
+                <!-- 长期愿景 -->
+                <div style="position: relative;">
+                    <div style="position: absolute; left: -25px; top: 0; width: 12px; height: 12px; background: #007AFF; border-radius: 50%;"></div>
+                    <h3 style="margin-bottom: 8px; color: #1d1d1f; font-size: 16px; font-weight: 600;">长期（5年以上）</h3>
+                    <p style="font-size: 14px; color: #444; line-height: 1.6;">
+                        成为技术专家，主导大型系统架构，结合业务推动技术创新，实现技术价值转化。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-panel" style="background: transparent; border: none; text-align: center;">
+            <div style="display: flex; justify-content: center; gap: 40px;">
+                <a href="mailto:zxqqqq1024@163.com" class="apple-link"><i class="fa-regular fa-envelope" style="margin-right: 10px;"></i>zxqqqq1024@163.com</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
