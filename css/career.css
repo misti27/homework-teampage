@@ -1,12 +1,3 @@
-:root {
-    --blue-main: #1a4fa3;
-    --bg-page: #f4f7fb;
-    --bg-card: #ffffff;
-    --text-main: #1f2937;
-    --text-muted: #6b7280;
-    --border-light: #e5e7eb;
-}
-
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -21,7 +12,7 @@ body {
     padding: 0 20px;
 }
 
-/* 卡片头部 - 蓝色渐变区域 */
+/* 卡片头部 */
 .card-header {
     height: 120px; 
     background: var(--blue-main);

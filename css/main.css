@@ -31,8 +31,6 @@ p {
     color: var(--text-muted);
 }
 
-
-
 .page-header {
     max-width: 1200px;
     margin: 32px auto 16px;
@@ -69,12 +67,15 @@ p {
     padding: 20px 18px 22px;
     text-align: center;
     border: 1px solid var(--border-light);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: all 0.2s ease;
+    /* 平滑过渡效果 */
+    /* transition: [property] [duration] [timing-function] [delay]; */
 }
 
 .member-card:hover {
     transform: translateY(-3px); /* 向上移动3px */
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--blue-main);
 }
 
 
@@ -88,8 +89,7 @@ p {
     border: 2px solid var(--border-light);
 }
 
-/* Info */
-
+/* 个人信息 */
 .member-card h3 {
     font-size: 16px;
     margin-bottom: 4px;
@@ -103,28 +103,28 @@ p {
 .role {
     font-size: 13px;
     margin-top: 2px;
-    color: #475569;
+    color: var(--text-muted);
 }
 
 /* 链接按钮 */
-
 .visit-btn {
     display: inline-block;
     margin-top: 14px;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 500; /* 中等粗细 */
     color: var(--blue-main);
-    text-decoration: none;
+    text-decoration: none; /* 去掉下划线 */
     padding: 6px 12px;
     border-radius: 12px;
-    transition: background 0.15s ease;
+    transition: all 0.15s ease;
 }
 
 .visit-btn:hover {
-    background-color: #abd9ffef;
+    background-color: #c4e4fffc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-
+/* 城市介绍页 */
 .city p {
     font-size: 15px;
     line-height: 1.6;
@@ -134,8 +134,8 @@ p {
     text-indent: 2em;
     padding-bottom: 8px;   /* 缩减内边距 */
     margin-bottom: 12px;   /* 缩减外边距 */
-    line-height: 1.8;      /* 增加行高，提升阅读体验 */
-    text-align: justify;   /* 让文字两端对齐，看起来更整齐 */
+    line-height: 1.8;      /* 增加行高 */
+    text-align: justify;   /* 文字两端对齐 */
 }
 
 .city-gallery {
@@ -176,7 +176,7 @@ p {
 
 .city-image img {
     width: 100%;
-    height: 270px;          /*  控制图片“视觉高度” */
+    height: 270px;          /*  控制图片高度 */
     object-fit: cover;     /*  保持比例，超出部分裁掉 */
     display: block;
     border-radius: 10px;
@@ -199,12 +199,7 @@ p {
     margin-top: 30px;
     padding: 30px 20px;
     text-align: center;
-    
-    /* 颜色与边框 */
     background-color: var(--blue-main);
-    /* border-top: 1px solid var( --bg-page); */
-
-    /* 文字样式 */
     color: var(--text-on-dark);
     font-size: 14px;
 }
@@ -226,82 +221,70 @@ p {
     text-decoration: underline;
 }
 
-/* --- 顶部导航栏 (含下拉菜单支持) --- */
-/* 导航栏背景 */
+/* 顶部导航栏 */
 .navbar {
-    background-color: var(--blue-main, #1a4fa3);
+    background-color: var(--blue-main, #1a4fa3); /* 主色 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
-    top: 0;
+    top: 0; /* 固定在顶部 */
     z-index: 1000;
     width: 100%;
-    /* 确保背景铺满全屏 */
 }
 
-/* 内容容器：限制最大宽度，但保持居中 */
+/* 内容容器 */
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     height: 60px;
-
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* 左右分散对齐 */
     align-items: center;
-
-    flex-direction: row !important;
+    flex-direction: row;
 }
 
 /* 左侧 Logo */
 .nav-logo {
-    color: #ffffff;
+    color: #fff;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
-
-    /* 关键：让它成为“矩形按钮” */
     padding: 0 16px;
     height: 60px;
     display: flex;
     align-items: center;
-
-    /* 为 hover 做准备 */
     position: relative;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 /* Logo 悬停效果 */
 .nav-logo:hover {
-    background-color: rgba(255, 255, 255, 0.12); /* 比背景更深一点 */
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
-/* 底部白色细边提示（hover 时出现） */
+/* 底部白色细边（hover 时出现） */
 .nav-logo::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: 0; /* 对齐父元素 */
     right: 0;
     bottom: 0;
-
     height: 3px;
-    background-color: #ffffff;
-
-    opacity: 0;
-    transition: opacity 0.2s ease;
+    background-color: var(--bg-card);
+    opacity: 0; /* 默认隐藏，透明度0 */
+    transition: all 0.2s ease;
 }
 
 .nav-logo:hover::after {
     opacity: 1;
 }
+
 /* 右侧链接列表 */
 .nav-links {
     list-style: none;
     margin: 0;
     padding: 0;
-
-    /* 强制横向排列 */
-    display: flex !important;
-    flex-direction: row !important;
+    display: flex; /* 横向排列 */
     gap: 10px;
     align-items: center;
 }
@@ -313,29 +296,27 @@ p {
     font-size: 15px;
     padding: 0 15px;
     height: 60px;
-    /* 撑满高度 */
     display: flex;
     align-items: center;
     position: relative;
 }
+
+/* 导航项底部细边 */
 .nav-item::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-
     height: 3px;
-    background-color: #ffffff;
-
+    background-color: #fff;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .nav-item:hover::after {
     opacity: 1;
 }
-
 
 /* 下拉菜单父容器 */
 .dropdown {
@@ -343,27 +324,25 @@ p {
     height: 60px;
     display: flex;
     align-items: center;
-    width: auto !important;
-    /* 强制宽度自动 */
 }
 
-/* 下拉菜单 (桌面端隐藏，悬停显示) */
+/* 下拉菜单  */
 .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #fff;
-    min-width: 160px;
+    background-color: var(--bg-card);
+    min-width: 140px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 0 0 4px 4px;
-    padding: 5px 0;
-    z-index: 1100;
     list-style: none;
+    margin: 0;  /* 去掉默认外边距 */
     padding: 0;
-    margin: 0;
+    z-index: 1100;
 }
 
+/* 默认情况下 .dropdown-menu 是 display: none;（隐藏）。
+   当父元素被 hover 时，将下拉菜单显示出来。 */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
@@ -371,14 +350,14 @@ p {
 .dropdown-link {
     display: block;
     padding: 10px 20px;
-    color: #333;
+    color: var(--text-main);
     text-decoration: none;
-    text-align: left;
+    text-align: center;
 }
 
 .dropdown-link:hover {
     background-color: #f5f5f5;
-    color: var(--blue-main, #1a4fa3);
+    color: var(--blue-main);
 }
 
 .inline-icon{
@@ -399,20 +378,20 @@ p {
     }
 
     .nav-container {
-        flex-direction: column !important;
+        flex-direction: column;
         height: auto;
         padding: 10px 15px;
     }
 
     .nav-links {
-        flex-direction: column !important;
+        flex-direction: column;
         width: 100%;
         margin-top: 10px;
         gap: 0;
     }
 
     .dropdown {
-        width: 100% !important;
+        width: 100%;
         display: block;
         text-align: center;
         height: auto;
@@ -423,31 +402,21 @@ p {
         justify-content: center;
         height: auto;
         padding: 12px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         display: inline-block;
     }
 
+    /* 移动端下拉菜单改为静态显示 */
     .dropdown-menu {
         position: static;
         width: 96%;
-        margin: 0 auto 10px auto;
-        display: none;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: none;
     }
 
     .dropdown:hover .dropdown-menu {
-        display: inline-block;
-    }
-
-    .dropdown-link {
-        text-align: center;
-        color: var(--blue-main, #1a4fa3) !important;
+        display: block; /* 移动端点击/悬停显示 */
     }
     
     .city-row {
-        flex-direction: column !important;
+        flex-direction: column ;
     }
 
     .city-image {
