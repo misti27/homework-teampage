@@ -213,7 +213,6 @@ p {
     color: var(--text-on-dark);
     text-decoration: none;
     font-weight: 500;
-    transition: opacity 0.2s;
 }
 
 .site-footer a:hover {
@@ -254,6 +253,7 @@ p {
     display: flex;
     align-items: center;
     position: relative;
+    text-shadow: 0 2px 4px rgb(39, 39, 39);
     transition: all 0.2s ease;
 }
 
