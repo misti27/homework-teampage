@@ -28,6 +28,26 @@
             gap: 40px;
         }
 
+        #back {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #back a {
+            display: inline-block;
+            font-size: 14px;
+            color: #1a4fa3;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        #back a:hover {
+            color: #2f1aa3;
+            text-decoration: underline;
+        }
+
 
         @media (max-width: 600px) {
             .details-grid {
@@ -131,7 +151,7 @@
                 </p>
             </section>
 
-            <div class="back">
+            <div id="back">
                 <a href="index.html" >&larr; 返回团队主页</a>
             </div>
 
