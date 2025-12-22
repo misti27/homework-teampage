@@ -6,11 +6,6 @@ body {
     line-height: 1.6;
 }
 
-a:hover {
-    text-decoration: underline;
-    color: #2f1aa3;
-}
-
 .container {
     max-width: 1200px; 
     margin: 40px auto;
