@@ -10,11 +10,16 @@
 
     <style>
         h2 {
+            font-family: Arial, Helvetica, sans-serif;
             border-bottom: 2px solid #e5e7eb;
             padding-bottom: 10px;
             margin-top: 30px;
             margin-bottom: 20px;
-            font-size: 20px;
+            font-size: 21px;
+        }
+
+        p {
+            font-size: 16px;
         }
 
         .details-grid {
@@ -25,6 +30,26 @@
         }
 
         .member-content a:hover {
+            color: #2f1aa3;
+            text-decoration: underline;
+        }
+
+        #back {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #back a {
+            display: inline-block;
+            font-size: 14px;
+            color: #1a4fa3;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        #back a:hover {
             color: #2f1aa3;
             text-decoration: underline;
         }
@@ -130,11 +155,11 @@
                     <strong>短期目标:</strong> 熟练掌握 Java 及相关后端技术栈，积累实际项目经验，提升解决问题的能力。
                 </p>
                 <p>
-                    <strong>长期目标:</strong> 熟悉Spring Boot、MyBatis等技术栈，Redis、MySQL等数据库，RabbitMQ等消息中间件，成为一名能够独立负责大型项目的全栈工程师。
+                    <strong>长期目标:</strong> 熟悉Spring Boot、MyBatis等技术栈，Redis、MySQL数据库，RabbitMQ等消息中间件，成为一名能够独立负责大型项目的全栈工程师。
                 </p>
             </section>
 
-            <div class="back">
+            <div id="back">
                 <a href="index.html" >&larr; 返回团队主页</a>
             </div>
 

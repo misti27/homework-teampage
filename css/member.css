@@ -6,8 +6,13 @@ body {
     line-height: 1.6;
 }
 
+a:hover {
+    text-decoration: underline;
+    color: #2f1aa3;
+}
+
 .container {
-    max-width: 1000px; 
+    max-width: 1200px; 
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -47,8 +52,7 @@ body {
 }
 
 .subtitle {
-    margin: 0;
-    font-size: 15px;
+    margin-top: 8px;
     color: var(--blue-main);
     font-weight: 500;
 }
@@ -106,24 +110,7 @@ body {
     margin-bottom: 16px;
 }
 
-.back {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-}
 
-.back a {
-    display: inline-block;
-    font-size: 14px;
-    color: #1a4fa3;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.back a:hover {
-    color: #2f1aa3;
-    text-decoration: underline;
-}
 
 @media (max-width: 800px) {
     .head-content {

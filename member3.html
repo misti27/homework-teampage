@@ -10,17 +10,47 @@
 
     <style>
         h2 {
+            font-family: Arial, Helvetica, sans-serif;
             border-bottom: 2px solid #e5e7eb;
             padding-bottom: 10px;
             margin-top: 30px;
             margin-bottom: 20px;
-            font-size: 20px;
+            font-size: 21px;
+        }
+
+        p {
+            font-size: 16px;
         }
 
         .details-grid {
+            /* 两列网格布局 */
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr; 
             gap: 40px;
+        }
+
+        .member-content a:hover {
+            color: #2f1aa3;
+            text-decoration: underline;
+        }
+
+        #back {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        #back a {
+            display: inline-block;
+            font-size: 14px;
+            color: #1a4fa3;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        #back a:hover {
+            color: #2f1aa3;
+            text-decoration: underline;
         }
 
         @media (max-width: 600px) {
